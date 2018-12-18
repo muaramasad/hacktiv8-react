@@ -10,7 +10,7 @@ class App extends Component {
       person: [],
     }
   }
-  componentDidMount(){
+  async componentDidMount(){
     // axios
     //   .get("https://swapi.co/api/people")
     //   .then(response => {
@@ -28,13 +28,18 @@ class App extends Component {
     //   });
 
     axios
-      .get("https://swapi.co/api/people")
+      .get("https://swapi.co/api/peopl")
       .then(response => response.data.results)
       .then(person => person.filter(p => p.height > 160))
       .then(person => this.setState({person: person,}))
+      .catch(err => console.log('error: ',err))
 
-    const data = axios.get("https://swapi.co/api/people");
-    console.log(data);
+    try {
+      const data = await axios.get("https://swapi.co/api/peopl");
+      console.log(data.data.results);
+    } catch(err) {
+      console.log('error dari try catch: ',err)
+    }
   }
   render() {
     return (
