@@ -1,0 +1,134 @@
+/* .App {
+  text-align: center;
+} */
+
+ul {
+  list-style-type: none;
+  background: grey;
+  overflow: hidden;
+  margin:0;
+  padding: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 14px 24px
+}
+
+.right-side {
+  float: right
+}
+
+.nopadding {
+  padding: 0 !important;
+}
+
+.profile, .meetup, .footer {
+  width:90%;
+  padding: 25px 25px;
+  margin: 0 auto;
+}
+
+.display-flex {
+  display: flex
+}
+
+.display-block {
+  display: block
+}
+
+.bg-lightgray {
+  background: lightgray;
+}
+
+.profile-picture {
+  background: darkgray;
+  height: 250px;
+  width: 300px;
+}
+
+.profile-info {
+  background: darkgray;
+  margin-left:25px;
+  width: 100%;
+  height: 240px;
+  padding-bottom: 10px;
+  padding-left: 20px
+}
+
+.profile-info h3{
+  font-weight: bold
+}
+
+.btn-joinus {
+  background:rgb(51, 50, 50);
+  padding:10px 25px;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+
+.title {
+  padding: 0 3%;
+  margin: 0 auto;
+}
+
+.meetup-date{ 
+  color:white;
+}
+
+.circle-picture {
+  width:100px;
+  height: 100px;
+  border-radius: 50px;
+  background:darkgray; 
+}
+
+.member-info {
+  margin-left:25px;
+}
+
+.see-all {
+  font-size: 15px;
+  float:right;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.meetup-info {
+  width:24%;
+  padding: 25px 25px;
+  margin-left:3%;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.meetup-info-date {
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;  
+}
+
+.meetup-info-content {
+  margin-top:25px;
+}
+
+.meetup-info-btn-view {
+  background:rgb(51, 50, 50);
+  padding:10px 20px;
+  color: white;
+  font-size: 18px
+}
+
+.footer {
+  margin-top: 50px;
+  border-top:1px solid #000;
+  text-align: center
+}
