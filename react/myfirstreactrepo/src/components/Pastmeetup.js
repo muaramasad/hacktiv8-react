@@ -9,8 +9,8 @@ export default class Pastmeetup extends Component {
             <h2>Past Meetup<span className="see-all">See All</span></h2>
          </div>
          <div className="meetup display-flex nopadding">
-            {this.props.pastmeetupdata.map(data => {
-               return <div className="meetup-info bg-lightgray">
+            {this.props.pastmeetupdata.map((data,index) => {
+               return <div key={index} className="meetup-info bg-lightgray">
                <div className="meetup-info-date font-bold">
                 {data.date}
                </div>
@@ -28,11 +28,10 @@ export default class Pastmeetup extends Component {
     )
   }
 }
-
 Pastmeetup.propTypes = {
-   pastmeetupdata: PropTypes.shape({
-      date: PropTypes.string.isRequired,
-      title: PropTypes.string,
-      attendant: PropTypes.number,
-   })
+   pastmeetupdata: PropTypes.arrayOf(PropTypes.shape({    
+      date: PropTypes.string.isRequired,    
+      title: PropTypes.string.isRequired,  
+      attendant: PropTypes.number.isRequired,
+   }))
 }

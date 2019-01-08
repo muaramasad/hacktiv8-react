@@ -1,23 +1,16 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 
-export default class Navbar extends Component {
-  render() {
-    return (
+const Navbar = (props) => {
+  return (
+    <div>
       <ul>
-         <li> <a href="#home">{this.props.menu.appname}</a></li>
-         <li><a href="#create">{this.props.menu.create}</a></li>
-         <li><a href="#Explore">{this.props.menu.explore}</a></li>
-         <li className="right-side"><a href="#Explore">Login</a></li>
+         <li> <a href="#home">{props.menu.appname}</a></li>
+          <li><a href="#create">{props.menu.create}</a></li>
+          <li><a href="#Explore">{props.menu.explore}</a></li>
+          <li className="right-side"><a href="#Explore">Login</a></li>
       </ul>
-    )
-  }
+    </div>
+  )
 }
 
-Navbar.propTypes = {
-   menu: PropTypes.shape({
-      appname: PropTypes.string.isRequired,
-      menu: PropTypes.string,
-      explore: PropTypes.string,
-   })
-}
+export default Navbar
