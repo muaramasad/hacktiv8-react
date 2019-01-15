@@ -29,6 +29,10 @@ li a {
   padding: 0 !important;
 }
 
+.mb-10 {
+  margin-bottom: 20px
+}
+
 .profile, .meetup, .footer {
   width:90%;
   padding: 25px 25px;

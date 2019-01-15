@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+import Axios from 'axios';
 
-import Navbar from './components/Navbar.js';
+import NavbarQtemu from './components/Navbar.js';
 import Profile from './components/Profile.js';
 import Nextmeetup from './components/Nextmeetup';
 import Aboutmeetup from './components/Aboutmeetup';
 import Membersmeetup from './components/Membersmeetup';
 import Pastmeetup from './components/Pastmeetup';
-import Footer from './components/Footer';
+import FooterQtemu from './components/Footer';
 
 
 class App extends Component {
@@ -59,21 +60,30 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-          {/* Navbar */}
-          <Navbar menu={this.state.menu}/>
-          {/* Profile */}
-          <Profile profiledata={this.state.profile}/>
-          {/* Next Meetup */}
-          <Nextmeetup nextmeetupdata={this.state.nextmeetup}/>
-          {/* About Meetup */}
-          <Aboutmeetup aboutmeetupdata={this.state.aboutmeetup}/>
-          {/* Members Meetup */}
-          <Membersmeetup membersmeetupdata={this.state.membersmeetup}/>
-          {/* Past Meetup */}
-          <Pastmeetup pastmeetupdata={this.state.pastmeetup}/>
-          {/* Footer */}
-          <Footer />
+      // <div className="App">
+      //     {/* Navbar */}
+      //     <Navbar menu={this.state.menu}/>
+      //     {/* Profile */}
+      //     <Profile profiledata={this.state.profile}/>
+      //     {/* Next Meetup */}
+      //     <Nextmeetup nextmeetupdata={this.state.nextmeetup}/>
+      //     {/* About Meetup */}
+      //     <Aboutmeetup aboutmeetupdata={this.state.aboutmeetup}/>
+      //     {/* Members Meetup */}
+      //     <Membersmeetup membersmeetupdata={this.state.membersmeetup}/>
+      //     {/* Past Meetup */}
+      //     <Pastmeetup pastmeetupdata={this.state.pastmeetup}/>
+      //     {/* Footer */}
+      //     <Footer />
+      // </div>
+      <div>
+        <NavbarQtemu menu={this.state.menu}/>
+        <Profile profiledata={this.state.profile}/>
+        <Nextmeetup nextmeetupdata={this.state.nextmeetup}/>
+        <Aboutmeetup aboutmeetupdata={this.state.aboutmeetup}/>
+        <Membersmeetup membersmeetupdata={this.state.membersmeetup}/>
+        <Pastmeetup pastmeetupdata={this.state.pastmeetup}/>
+        <FooterQtemu />
       </div>
     );
   }
