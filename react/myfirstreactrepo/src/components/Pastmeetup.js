@@ -42,7 +42,10 @@ export default class Pastmeetup extends Component {
       //    </div>
       // </div>
       <Container style={mb10}>
-         <Title isSize={3}>Past Meetup <span style={seeAll}>See All</span></Title>
+         <Title isSize={3}>
+            {this.props.title ? this.props.title : 'Past Meetup'} 
+            <span style={seeAll}>See All</span>
+         </Title>
          <Columns>
             {this.props.pastmeetupdata.map((data,index) => {
                return <Column key={index} isSize='1/3'>
