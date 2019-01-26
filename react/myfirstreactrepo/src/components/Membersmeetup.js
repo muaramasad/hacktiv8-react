@@ -28,7 +28,6 @@
 // }
 
 import React from 'react'
-import Bulma from 'bulma'
 import { 
   Container, Column, Columns, Title, Box, Image
 } from 'bloomer'

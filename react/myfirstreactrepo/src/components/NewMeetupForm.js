@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Bulma from 'bulma'
 import { 
   Field, Label, Control, Input, Container, Column, Columns, Button
 } from 'bloomer'

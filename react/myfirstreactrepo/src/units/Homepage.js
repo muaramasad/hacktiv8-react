@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import logo from './../logo.svg';
-
 import NavbarQtemu from './../components/Navbar.js';
 import Profile from './../components/Profile.js';
 import Nextmeetup from './../components/Nextmeetup';
@@ -13,17 +11,17 @@ export default class Homepage extends Component {
    constructor(){
       super()
       this.state = {
-        menu: {
-          appname: "QTemu",
-          create: "Create Meetup",
-          explore: "Explore"
-        },
-        profile: {
-          location: "Bandung, Indonesia",
-          title: "Hactiv8 Meetup",
-          member: 1087,
-          organizer: "Ardhy Winata",
-        },
+        // menu: {
+        //   appname: "QTemu",
+        //   create: "Create Meetup",
+        //   explore: "Explore"
+        // },
+        // profile: {
+        //   location: "Bandung, Indonesia",
+        //   title: "Hactiv8 Meetup",
+        //   member: 1087,
+        //   organizer: "Ardhy Winata",
+        // },
         nextmeetup: {
           title: "Awesome meetup and event",
           date: "20 December 2018",

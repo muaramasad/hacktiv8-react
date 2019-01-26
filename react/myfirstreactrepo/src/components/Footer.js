@@ -1,14 +1,7 @@
 import React from 'react'
-import Bulma from 'bulma'
 import { 
   Footer, Container, Columns, Column, Content, Icon
 } from 'bloomer'
-
-const FooterStyle = {
-  marginTop: '50px',
-  borderTop:'1px solid #000',
-  textAlign: 'center'
-}
 
 const FooterQtemu = () => {
   return (
@@ -21,16 +14,16 @@ const FooterQtemu = () => {
     <Container>
         <Content>
             <Columns>
-                <Column isFull>
+                <Column>
                     <p>
                         Made with<Icon hasTextColor="danger" className="fa fa-heart"></Icon> 
-                        from <a>Indonesia</a>
+                        from <a href="#">Indonesia</a>
                     </p>
                 </Column>
             </Columns>
             <Content isSize='small'>
-                <p>The source code is licensed under <a target="_blank">MIT</a>.</p>
-                <p>The website content is licensed under <a target="_blank">CC ANS 4.0</a>.</p>
+                <p>The source code is licensed under <a href="#" target="_blank">MIT</a>.</p>
+                <p>The website content is licensed under <a href="#" target="_blank">CC ANS 4.0</a>.</p>
             </Content>
         </Content>
     </Container>

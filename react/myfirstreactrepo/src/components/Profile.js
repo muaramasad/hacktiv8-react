@@ -8,11 +8,12 @@
 // }
 
 import React from 'react'
-import Bulma from 'bulma'
 import { 
   Container, Columns, Column, Image, Title, Button, Icon
 } from 'bloomer'
 import Banner from './img/banner.jpg'
+
+import { connect } from 'react-redux'
 
 const mt10 = {
    marginTop: '20px'
@@ -45,10 +46,10 @@ const Profile = (props) => {
           </Column>
           <Column isSize='3/4'>
             <div style={mt10}>
-               <Title isSize={3}>{props.profiledata.title}</Title>
-               <p style={mb5}><Icon hasTextColor="gray" isSize="small" className="fa fa-map-marker" /> Location {props.profiledata.location}</p>
-               <p style={mb5}><Icon isSize="small" className="fa fa-user" /> Member {props.profiledata.member}</p>
-               <p style={mb5}><Icon isSize="small" className="fa fa-calendar-check" /> Organizer {props.profiledata.organizer}</p>
+               <Title isSize={3}>{props.name}</Title>
+               <p style={mb5}><Icon hasTextColor="gray" isSize="small" className="fa fa-map-marker" /> Location {props.location}</p>
+               <p style={mb5}><Icon isSize="small" className="fa fa-user" /> Member {props.members}</p>
+               <p style={mb5}><Icon isSize="small" className="fa fa-calendar-check" /> Organizer {props.organizedBy}</p>
                <Button isColor="info" style={mt10}>
                Join Us
                </Button>
@@ -59,4 +60,11 @@ const Profile = (props) => {
    )
 }
 
-export default Profile
+const mapStateToProps = (state) => ({
+   name: state.name,
+   location: state.location,
+   members: state.members,
+   organizedBy: state.organizedBy
+})
+
+export default connect(mapStateToProps)(Profile);

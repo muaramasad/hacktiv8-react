@@ -1,5 +1,5 @@
 import React from 'react'
-import Bulma from 'bulma'
+import { connect } from 'react-redux'
 import { 
   Navbar, NavbarStart, NavbarItem, NavbarMenu 
 } from 'bloomer'
@@ -11,13 +11,13 @@ const NavbarQtemu = (props) => {
       <NavbarMenu>
         <NavbarStart>
           <Link to="/">
-            <NavbarItem>{props.menu.appname}</NavbarItem>
+            <NavbarItem>{props.appName}</NavbarItem>
           </Link>
           <Link to="/create-meetup">
-            <NavbarItem>{props.menu.create}</NavbarItem>
+            <NavbarItem>{props.create}</NavbarItem>
           </Link>
           <Link to="/explore">
-            <NavbarItem>{props.menu.explore}</NavbarItem>
+            <NavbarItem>{props.explore}</NavbarItem>
           </Link>
         </NavbarStart>
       </NavbarMenu>
@@ -25,4 +25,11 @@ const NavbarQtemu = (props) => {
   )
 }
 
-export default NavbarQtemu
+
+const mapStateToProps = (state) => ({
+  appName: state.appname,
+  create: state.create,
+  explore: state.explore,
+})
+
+export default connect(mapStateToProps)(NavbarQtemu);

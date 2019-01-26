@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
-import Bulma from 'bulma'
 import { 
-  Container, Column, Columns, Title, Box, Image, Button
+  Container, Column, Columns, Title, Box, Button
 } from 'bloomer'
 
 const mb10 = {

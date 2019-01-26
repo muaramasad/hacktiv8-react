@@ -5,9 +5,8 @@
 // }
 
 import React from 'react'
-import Bulma from 'bulma'
 import { 
-  Container, Column, Columns, Title, Box
+  Container, Title, Box
 } from 'bloomer'
 
 const mb10 = {
