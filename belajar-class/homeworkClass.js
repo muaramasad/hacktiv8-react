@@ -31,6 +31,6 @@ class Eye extends Circle{
       this.color = color;
    }
    roll(rollAmount){
-
+      this.x += rollAmount
    }
 }
