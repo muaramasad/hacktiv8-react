@@ -19,10 +19,10 @@ export default class Navbar extends Component {
               
             </div>
             <div>
-            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-grey-dark hover:text-grey-darker no-underline mr-4">
+            <a href="/events" class="block mt-4 lg:inline-block lg:mt-0 text-grey-dark hover:text-grey-darker no-underline mr-4">
                 Acara Musik
               </a>
-              <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-grey-dark hover:text-grey-darker no-underline mr-4">
+              <a href="/artists" class="block mt-4 lg:inline-block lg:mt-0 text-grey-dark hover:text-grey-darker no-underline mr-4">
                 Musisi & Band
               </a>
             </div>
