@@ -6,8 +6,8 @@ import Footer from './../components/Footer';
 import Card from './../components/Card';
 
 export default class artists extends Component {
-  constructor(){
-    super()
+   constructor(){
+   super()
    this.state = {
       dataArtists:[
          {
@@ -34,27 +34,35 @@ export default class artists extends Component {
              'Melodic Punk'
            ]
          },{
-            title: "Tinky Winky",
-            img: "http://new.adamusik.id/storage/72/b52cebda653145ad8e903d8e92f3f2d8_profile.jpeg",
-            location: "Depok, West Java",
+            title: "Sunday With Chocolate",
+            img: "http://new.adamusik.id/storage/68/088d1e9392cb41189ea8eff8417d33b5_profile.jpeg",
+            location: "Jakarta Utara, Jakarta",
             genres: [
               'pop punk'
             ]
           },
           {
-            title: "Dream Five Line",
-            img: "http://new.adamusik.id/storage/43/962dda9ca999475598604d994969fdc3_profile.png",
-            location: "Jakarta Pusat, Jakarta",
+            title: "Drop Inside",
+            img: "http://new.adamusik.id/storage/44/952a5d6c6d9b44eba6f1f8421d8eb7ed_profile.jpeg",
+            location: "Tangerang, Banten",
             genres: [
-              'Alternative'
+              'Hardcore'
             ]
           },
           {
-            title: "MYADVENTURE",
-            img: "http://new.adamusik.id/storage/14/100ff80b05944b4480a13dd94765ba94_profile.jpeg",
-            location: "Jakarta Selatan, Jakarta",
+            title: "Semiotika",
+            img: "http://new.adamusik.id/storage/64/ac6ad95267b648d2a9a659085f7cafbf_profile.jpeg",
+            location: "Jambi, Jambi",
             genres: [
-              'Melodic Punk'
+              'Rock'
+            ]
+          },
+          {
+            title: "Semiotika",
+            img: "http://new.adamusik.id/storage/64/ac6ad95267b648d2a9a659085f7cafbf_profile.jpeg",
+            location: "Jambi, Jambi",
+            genres: [
+              'Rock'
             ]
           }
        ]
@@ -65,8 +73,11 @@ export default class artists extends Component {
   }
   _chunkData() {
    this.setState({
-      dataArtists: _.chunk(this.state.dataArtists, 2)
+      dataArtists: _.chunk(this.state.dataArtists, 3)
     });
+  }
+  _fungsiUpdate(){
+
   }
   _renderArtistsCard(){
      let div = [];

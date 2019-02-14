@@ -22,9 +22,9 @@ export default class SectionHome extends Component {
                   }) : '')
                }
             </div>
-            <a href="">
-               <Button textBtn={this.props.textBtn}/>
-            </a>
+            {
+               (this.props.type === 'event' ? <a href="/events"><Button textBtn={this.props.textBtn}/></a> : <a href="/artists"><Button textBtn={this.props.textBtn}/></a> )
+            }
          </div>
         </div>
     )
