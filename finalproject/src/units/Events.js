@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './../components/Navbar';
-import Banner from './../components/Banner';
 import SectionHome from './../components/SectionHome';
-import BottomBanner from './../components/BottomBanner';
 import FooterLink from './../components/FooterLink';
 import Footer from './../components/Footer';
 

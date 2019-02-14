@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import Navbar from './../components/Navbar';
-import Card from './../components/Card';
 import FooterLink from './../components/FooterLink';
 import Footer from './../components/Footer';
-
-const perChunk = 2
+import Card from './../components/Card';
 
 export default class artists extends Component {
   constructor(){
@@ -62,6 +60,25 @@ export default class artists extends Component {
        ]
    }
   }
+  componentDidMount(){
+     this._chunkData();
+  }
+  _chunkData() {
+   this.setState({
+      dataArtists: _.chunk(this.state.dataArtists, 2)
+    });
+  }
+  _renderArtistsCard(){
+     let div = [];
+     for(let i = 0;i < this.state.dataArtists.length;i++){
+         let card = [];
+         for(let j = 0;j < this.state.dataArtists[i].length;j++){
+            card.push(<Card key={j} img={this.state.dataArtists[i][j].img} title={this.state.dataArtists[i][j].title} location={this.state.dataArtists[i][j].location} genres={this.state.dataArtists[i][j].genres} />);
+         } 
+         div.push(<div key={i} className="flex flex-col sm:flex-col md:flex-row xl:flex-row text-black">{card}</div>);
+     }
+     return div;
+  }
   render() {
     return (
       <div>
@@ -69,18 +86,14 @@ export default class artists extends Component {
           <Navbar />
         </header>
         <main className="w-full font-sans">
-            <div class="border-t-2 border-grey-lighter bg-grey-lighter">
-               <div class="container mx-auto flex flex-col lg:flex-row text-sm leading-normal px-4 md:px-12 pt-6 ">
-               <nav class="p-3 rounded font-sans w-full"><ol class="list-reset flex text-grey-dark"><li><a href="http://new.adamusik.id" class="text-orange font-bold no-underline">Home</a></li> <li><span class="mx-2">/</span></li> <li>Musisi &amp; Band</li></ol></nav>
+            <div className="border-t-2 border-grey-lighter bg-grey-lighter">
+               <div className="container mx-auto flex flex-col lg:flex-row text-sm leading-normal px-4 md:px-12 pt-6 ">
+               <nav className="p-3 rounded font-sans w-full"><ol className="list-reset flex text-grey-dark"><li><a href="http://new.adamusik.id" className="text-orange font-bold no-underline">Home</a></li> <li><span className="mx-2">/</span></li> <li>Musisi &amp; Band</li></ol></nav>
                </div>
-               <div class="container mx-auto md:pb-12 xl:pb-12">
-                  <div class="md:flex flex-wrap justify-center">
-                     <div class="w-full md:w-2/3 xl:w-2/3 mt-0 md:mt-0 text-center">
-                           {
-                              this.state.dataArtists.map((data, index) => { 
-                                    return <div class="flex flex-col sm:flex-col md:flex-row xl:flex-row text-black"><Card key={index} img={data.img} title={data.title} location={data.location} genres={data.genres} /></div>
-                               })
-                           }
+               <div className="container mx-auto md:pb-12 xl:pb-12">
+                  <div className="md:flex flex-wrap justify-center">
+                     <div className="w-full md:w-2/3 xl:w-2/3 mt-0 md:mt-0 text-center">
+                           {this._renderArtistsCard()}
                      </div>
                   </div>
                </div>
